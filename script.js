@@ -3,13 +3,27 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword (){ 
   // your code here
+// length 
+  var length = prompt("Please enter the length of you password between 8 and 128.");
+  //select the characters
+  var chartype = window.prompt("Do you want to use lower case letters?");
+  var chartype = window.prompt("Do you want to use any special characters?");
+  var chartypee = window.prompt("Do you want to use UPPERCASE letters?");
+  var chartype = window.prompt("Do you want to use numbers?");
+
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var symbols = "!@#$%^&*()-_+=.,:;<>?[]`{}|~"; 
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numbers = "0123456789";
 
-  var result = prompt
 
-  var random = Math.floor (Math.random() * lowercase.length);
+  var random = Math.floor(Math.random() * lowercase.length);
 
-  console.log('RANDOM', random, lowercase)
+  var random = Math.floor(Math.random() * symbols.length);
+
+  console.log("RANDOM", random, lowercase[random], symbols[random], uppercase[random], numbers[random]);
+
+
   return "";
 
 }
