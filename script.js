@@ -10,10 +10,14 @@ function generatePassword (){
   }
   //select the characters
   if (length >= 8 && length <= 128){
-  var chartype = window.confirm("Do you want to use lower case letters?");
-  var chartype = window.confirm("Do you want to use any special characters?");
-  var chartypee = window.confirm("Do you want to use UPPERCASE letters?");
-  var chartype = window.confirm("Do you want to use numbers?");
+  var clower = window.confirm("Do you want to use lower case letters?");
+  var csymbol = window.confirm("Do you want to use any special characters?");
+  var cupper = window.confirm("Do you want to use UPPERCASE letters?");
+  var cnumber = window.confirm("Do you want to use numbers?");
+  }
+  
+  if (cupper != true && clower != true && csymbol != true && cnumber != true){
+    alert("You must select at least one character type!!!!")
   }
 
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -32,7 +36,11 @@ function generatePassword (){
 
 
   
-  console.log("RANDOM", random, lowercase[random], symbols[random], uppercase[random], numbers[random]);
+  console.log("RANDOM", random, lowercase[random]);
+  console.log("RANDOM", random,symbols[random]);
+
+
+  return "";
 
 }
 // Write password to the #password input
