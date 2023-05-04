@@ -16,7 +16,7 @@ function generatePassword (){
     return;
   }
   //select the characters
-   clower =confirm("Do you want to use lower case letters?");
+   clower =confirm("Do you want to use lower case letters?")
    csymbol = confirm("Do you want to use any special characters?");
    cupper = confirm("Do you want to use UPPERCASE letters?");
    cnumber = confirm("Do you want to use numbers?");
@@ -25,28 +25,30 @@ function generatePassword (){
     alert("You must select at least one character type!!!!");
   }
   if (clower) {
-    characterSet += 'lower';
+    characterSet = characterSet.concat(lower);
   }
   if (cupper) {
-    characterSet += upper;
+    characterSet = characterSet.concat(upper);
   }
  if (csymbol) {
-  characterSet += symbol;
+  characterSet = characterSet.concat(symbol);
  }
  if (cnumber){
-  characterSet += number;
+  characterSet = characterSet.concat(number);
  }
-
+console.log(characterSet)
   // once selected randomized
-  
+  var Random = ""
   for (var i = 0; i < length; i++){
-  var random = [Math.floor(Math.random() * characterSet.length)];
-    password += characterSet[random];
+  var Random = Random + characterSet[Math.floor(Math.random() * characterSet.length)];
+console.log(Random)
   }
+  
 
   
 
-  return password;
+  return Random;
+  
 
 }
 // Write password to the #password input
