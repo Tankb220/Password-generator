@@ -23,6 +23,7 @@ function generatePassword (){
   
   if (cupper != true && clower != true && csymbol != true && cnumber != true){
     alert("You must select at least one character type!!!!");
+    return '';
   }
   if (clower) {
     characterSet = characterSet.concat(lower);
@@ -43,9 +44,6 @@ console.log(characterSet)
   var Random = Random + characterSet[Math.floor(Math.random() * characterSet.length)];
 console.log(Random)
   }
-  
-
-  
 
   return Random;
   
